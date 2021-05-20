@@ -11,7 +11,7 @@ Una vez tengamos contratado el servicio con un provedor este nos instalara una d
 
 ## Paso 1 - Conectate via shh
 
-Para poder acceder a nuestro servidor desde nuestro ordenador hemos de abrir nuestra consola de comandos. En windows pulsa command("tecla Windows") + R y escribe cmd en la ventana que se muestra. Si tu OS es una distribucion linux pulsa control + alt + t. Si utilizas MacOS puedes buscar la terminal dentro de tus aplicaciones.
+Para poder acceder a nuestro servidor desde nuestro ordenador hemos de abrir nuestra consola de comandos. En windows pulsa command("tecla Windows") + R y escribe cmd en la ventana que se muestra. Si tu OS es una distribucion linux pulsa control + alt + t. Si utilizas MacOS puedes buscar la terminal dentro del launchpad pero la manera mas sencilla es utilizar el launchpad (cmd + espacio) y buscar terminal.
 
 Deberias ver algo similiar a esto:
 
