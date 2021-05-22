@@ -158,8 +158,24 @@ Y ya puedes recuperar la sesión que quieras indicando el id de la sesión:
 screen -r minecraft-session
 ```
 
-## Extra 2 - Descargar archivos desde el servidor
+## Extra 2 - Descargar/Subir archivos
+
+Es posible que en algún momento necesites subir o bajar archivos, por ejemplo para cargar otro mundo de minecraft en el servidor. Para ello podemos usar scp, que es un programa basado en ssh que nos permite copiar archivos desde nuestro servidor a nuestro ordenador y viceversa.
+
+Para descargar un directorio entero hacemos:
 
 ```bash
-scp root@51.83.43.17:/root/MinecraftTubarra/world/* C:\Users\ddomi\Downloads
+scp -r nombre_de_usuario@ip_del_servidor:/root/minecraft-server/world C:\Users\ddomi\Downloads
+```
+
+Si en vez de trabajar con directorios quieres trabajar con archivos sueltos retira el `-r`.
+
+```bash
+scp nombre_de_usuario@ip_del_servidor:/root/minecraft-server/world/session.lock C:\Users\ddomi\Downloads
+```
+
+Y para subir archivos simplente cambia el orden de las rutas.
+
+```bash
+scp C:\Users\ddomi\Downloads\session.lock  nombre_de_usuario@ip_del_servidor:/root
 ```
