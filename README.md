@@ -138,7 +138,27 @@ java -Xmx1024M -Xms1024M -jar server.jar nogui
 
 Ahora para cerrar la sesión podemos pulsar `Ctrl+a d` y cerrar nuestra cmd con tranquilidad.
 
-## Extra - Descargar archivos desde el servidor
+## Extra 1 - Recuperar la session de screen
+
+Para recuperar la ultima sesión que archivaste en screen puedes ejecutar simplemente:
+
+```bash 
+screen -r
+```
+
+Si la sesión a la que quieres acceder no es la ultima simplemente lista las sesiones disponibles:
+
+```bash 
+screen -ls
+```
+
+Y ya puedes recuperar la sesión que quieras indicando el id de la sesión:
+
+```bash 
+screen -r minecraft-session
+```
+
+## Extra 2 - Descargar archivos desde el servidor
 
 ```bash
 scp root@51.83.43.17:/root/MinecraftTubarra/world/* C:\Users\ddomi\Downloads
