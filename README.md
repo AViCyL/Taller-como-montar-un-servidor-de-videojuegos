@@ -118,6 +118,26 @@ java -Xmx1024M -Xms1024M -jar server.jar nogui
 
 No obstante aunque funcione si cerramos el terminal se cerrara tambien el servidor.
 
+## Paso 5 - Mantener el servidor corriendo cuando cierro el cmd
+
+Como probablemente te habras dado cuenta si cierras el cmd tambien lo hace el servidor, esto sucede porque al cerrar la cmd cierras la sesion en el servidor y todos los procesos que estaban corriendo ahí se cierran a su vez a consecuencia de eso. 
+
+Para solucionar esto vamos a utilizar un programa llamado GNUScreen. Este programa es un multiplexador de terminales, basicamente esta pensado para permitir al usuario utilizar diferentes sesiones utilizando la misma interfaz. Lo interesante es que las terminales que abramos y archivemos con screen son persistenates, lo que quiere decir que sus procesos van a seguir funcionando anque terminemos nuestra sesión ssh.
+
+Entonces lo primero que tendremos que hacer es crear una nueva sesión con screen, puedes hacerlo sin necesidad de darla un nombre, pero es conveniente para poderla localizar comodamente en un futuro.
+
+```bash
+screen -S minecraft_session
+```
+
+Corre el server.
+
+```bash
+java -Xmx1024M -Xms1024M -jar server.jar nogui 
+```
+
+Ahora para cerrar la sesión podemos pulsar `Ctrl+a d` y cerrar nuestra cmd con tranquilidad.
+
 ## Extra - Descargar archivos desde el servidor
 
 ```bash
