@@ -1,4 +1,5 @@
-# Como-montar-un-servidor-de-videojuegos
+# Como montar un servidor de videojuegos.
+
 Taller parte de la jornada dos del evento ¨Las mujeres en el videojuego¨.
 
 ## Paso 0 - Prerequisitos
